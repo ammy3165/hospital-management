@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 public class AdminRequest {
+
     private String email;
     private String password;
 
