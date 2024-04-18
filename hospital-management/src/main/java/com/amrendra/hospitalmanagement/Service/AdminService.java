@@ -42,7 +42,7 @@ public class AdminService {
         if(admin!=null){
             if(BCrypt.checkpw(adminRequest.getPassword(), admin.getPassword())){
 
-              adminResponse.setFirstName(admin.getFistName());
+              adminResponse.setFirstName(admin.getFirstName());
               adminResponse.setLastName(admin.getLastName());
               adminResponse.setEmail(admin.getEmail());
               return adminResponse;

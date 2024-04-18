@@ -1,12 +1,8 @@
 package com.amrendra.hospitalmanagement.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Data;
+import jakarta.persistence.*;
 
-
+@Table(name="Doctor")
 @Entity
 public class Doctor {
 
@@ -15,6 +11,8 @@ public class Doctor {
     private int doctorId;
     private String firstName;
     private String lastName;
+
+    @Column(unique = true)
     private String email;
     private boolean doctorPresent;
 
@@ -51,4 +49,11 @@ public class Doctor {
     }
 
 
+    public boolean isDoctorPresent() {
+        return doctorPresent;
+    }
+
+    public void setDoctorPresent(boolean doctorPresent) {
+        this.doctorPresent = doctorPresent;
+    }
 }

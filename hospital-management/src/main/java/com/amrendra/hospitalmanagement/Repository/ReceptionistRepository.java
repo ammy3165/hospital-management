@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface ReceptionistRepository extends JpaRepository<Receptionist, Integer> {
 
+    Receptionist findByEmail(String billingRequest);
 }
