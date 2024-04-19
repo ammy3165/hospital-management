@@ -1,33 +1,21 @@
-package com.amrendra.hospitalmanagement.Entity;
+package com.amrendra.hospitalmanagement.Request;
 
-import jakarta.persistence.*;
 
-@Table(name="Doctor")
-@Entity
-public class Doctor {
+public class RegisterRequest {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int doctorId;
     private String firstName;
     private String lastName;
-    private String gender;
-    private String password;
-    private Long phoneNumber;
-    private int age;
-    private String specialisation;
-
-    @Column(unique = true)
     private String email;
+    private String password;
+    private String gender;
+    private Long phoneNumber;
+    private String address;
+    private int age;
+    private String Specialisation;
     private boolean doctorPresent;
 
-    public int getDoctorId() {
-        return doctorId;
-    }
-
-    public void setDoctorId(int doctorId) {
-        this.doctorId = doctorId;
-    }
+    //  doctor|patient|admin|receptionist
+    private String role;
 
     public String getFirstName() {
         return firstName;
@@ -51,15 +39,6 @@ public class Doctor {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-
-    public boolean isDoctorPresent() {
-        return doctorPresent;
-    }
-
-    public void setDoctorPresent(boolean doctorPresent) {
-        this.doctorPresent = doctorPresent;
     }
 
     public String getPassword() {
@@ -86,6 +65,18 @@ public class Doctor {
         this.phoneNumber = phoneNumber;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
     public int getAge() {
         return age;
     }
@@ -95,10 +86,22 @@ public class Doctor {
     }
 
     public String getSpecialisation() {
-        return specialisation;
+        return Specialisation;
     }
 
     public void setSpecialisation(String specialisation) {
-        this.specialisation = specialisation;
+        Specialisation = specialisation;
+    }
+
+    public boolean isDoctorPresent() {
+        return doctorPresent;
+    }
+
+    public void setDoctorPresent(boolean doctorPresent) {
+        this.doctorPresent = doctorPresent;
+    }
+
+    public String getRole() {
+        return role;
     }
 }

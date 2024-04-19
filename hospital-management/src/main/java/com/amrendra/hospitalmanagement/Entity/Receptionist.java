@@ -10,6 +10,9 @@ public class Receptionist {
     private int receptionistId;
     private String firstName;
     private String lastName;
+    private String gender;
+    private String password;
+    private Long phoneNumber;
 
     @Column(unique=true)
     private String email;
@@ -47,4 +50,27 @@ public class Receptionist {
         this.email = email;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Long getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(Long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }

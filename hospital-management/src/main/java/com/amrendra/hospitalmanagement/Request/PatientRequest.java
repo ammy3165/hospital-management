@@ -1,34 +1,14 @@
-package com.amrendra.hospitalmanagement.Entity;
+package com.amrendra.hospitalmanagement.Request;
 
-import jakarta.persistence.*;
-
-@Entity
-public class Patient {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int patientId;
-
+public class PatientRequest {
     private String firstName;
     private String lastName;
     private String gender;
+    private String Email;
     private String password;
     private Long phoneNumber;
     private int age;
     private String Address;
-
-
-    @Column(unique=true)
-    private String email;
-
-
-    public int getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(int patientId) {
-        this.patientId = patientId;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -44,14 +24,6 @@ public class Patient {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getGender() {
@@ -92,5 +64,13 @@ public class Patient {
 
     public void setAddress(String address) {
         Address = address;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
     }
 }
