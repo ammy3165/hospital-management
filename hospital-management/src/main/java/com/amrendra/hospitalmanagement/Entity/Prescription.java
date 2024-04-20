@@ -11,9 +11,17 @@ public class Prescription {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long prescriptionId;
     private Date prescriptionDate;
+    private String givenPrescription;
 
-    @ManyToMany
-    private List<Medicine> medicines;
+    @OneToOne
+    private Appointment appointment;
+    @ManyToOne
+    private Doctor doctor;
+    @ManyToOne
+    private Patient patient;
+
+    @ManyToOne
+    private Medicine medicines;
 
 
     public java.sql.Date getPrescriptionDate() {
@@ -32,11 +40,53 @@ public class Prescription {
         this.prescriptionId = prescriptionId;
     }
 
-    public List<Medicine> getMedicines() {
-        return medicines;
+
+    public String getGivenPrescription() {
+        return givenPrescription;
     }
 
-    public void setMedicines(List<Medicine> medicines) {
+    public void setGivenPrescription(String givenPrescription) {
+        this.givenPrescription = givenPrescription;
+    }
+
+    public Appointment getAppointment() {
+        return appointment;
+    }
+
+    public void setAppointment(Date appointmentDate) {
+        this.appointment = appointment;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(List<Doctor> selectedDoctor) {
+        this.doctor = doctor;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public void setAppointment(Appointment appointment) {
+        this.appointment = appointment;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+
+    public Medicine getMedicine() {
+        return (Medicine) medicines;
+    }
+
+    public void setMedicine(Medicine medicine) {
         this.medicines = medicines;
     }
 }

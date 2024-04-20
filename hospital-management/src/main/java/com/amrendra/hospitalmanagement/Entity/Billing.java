@@ -25,6 +25,7 @@ public class Billing {
     @OneToOne
     private Prescription prescription;
 
+
     public Long getBillingId() {
         return billingId;
     }

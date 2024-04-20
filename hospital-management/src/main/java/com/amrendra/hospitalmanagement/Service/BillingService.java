@@ -8,14 +8,22 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BillingService {
     @Autowired
     private BillingRepository billingRepo;
+    @Autowired
     private DoctorRepository doctorRepo;
+    @Autowired
     private PatientRepository patientRepo;
+    @Autowired
     private ReceptionistRepository receptionistRepo;
-    private prescriptionRepository prescriptionRepo;
+    @Autowired
+    private PrescriptionRepository prescriptionRepo;
+    @Autowired
+    private MedicineRepository medicineRepo;
 
     public Double generateBill(BillingRequest billingRequest) throws oneToOneException {
         Doctor doctor = doctorRepo.findByEmail(billingRequest.getDoctorByEmail());
@@ -26,8 +34,8 @@ public class BillingService {
 
         if (doctor != null && patient != null && receptionist != null &&
                 prescription != null && doctor.isDoctorPresent()) {
-
-            Double medicineAmount = prescription.getMedicines().stream()
+            List<Medicine> medicineList=medicineRepo.findAll();
+            Double medicineAmount = medicineList.stream()
                     .mapToDouble(Medicine::getPrice).sum();
 
             Double totalAmount = medicineAmount + billingRequest.getDoctorAmount();
