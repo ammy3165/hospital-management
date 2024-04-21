@@ -17,12 +17,16 @@ public class Billing {
     private boolean paymentStatus;
 
     @ManyToOne
+    @JoinColumn(name="doctor_id")
     private Doctor doctor;
     @ManyToOne
+    @JoinColumn(name="patient_id")
     private Patient patient;
     @ManyToOne
+    @JoinColumn(name="receptionist_id")
     private Receptionist receptionist;
     @OneToOne
+    @JoinColumn(name="prescription_id")
     private Prescription prescription;
 
 

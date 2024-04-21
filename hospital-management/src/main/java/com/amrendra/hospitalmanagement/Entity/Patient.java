@@ -13,10 +13,9 @@ public class Patient {
     private String lastName;
     private String gender;
     private String password;
-    private Long phoneNumber;
+    private Long phone;
     private int age;
     private String Address;
-
 
     @Column(unique=true)
     private String email;
@@ -70,14 +69,6 @@ public class Patient {
         this.password = password;
     }
 
-    public Long getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(Long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
     public int getAge() {
         return age;
     }
@@ -92,5 +83,21 @@ public class Patient {
 
     public void setAddress(String address) {
         Address = address;
+    }
+
+    public Long getPatientPhone() {
+        return phone;
+    }
+
+    public void setPatientPhone(Long patientPhone) {
+        this.phone = patientPhone;
+    }
+
+    public Long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Long phone) {
+        this.phone = phone;
     }
 }
