@@ -28,7 +28,6 @@ public class AdminController {
     @GetMapping("/allDoctors")
     public List<DoctorResponse> getAllDoctors(){
         return adminService.getAllDoctors();
-
     }
 
     @GetMapping("/allPatients")
