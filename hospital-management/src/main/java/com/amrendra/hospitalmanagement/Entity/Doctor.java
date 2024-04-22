@@ -13,7 +13,7 @@ public class Doctor {
     private String lastName;
     private String gender;
     private String password;
-    private Long phoneNumber;
+    private String phoneNumber;
     private int age;
     private String specialisation;
 
@@ -53,7 +53,6 @@ public class Doctor {
         this.email = email;
     }
 
-
     public boolean isDoctorPresent() {
         return doctorPresent;
     }
@@ -78,11 +77,11 @@ public class Doctor {
         this.gender = gender;
     }
 
-    public Long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

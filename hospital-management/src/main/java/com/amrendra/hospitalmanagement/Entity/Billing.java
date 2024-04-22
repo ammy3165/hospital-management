@@ -15,6 +15,7 @@ public class Billing {
     private Double doctorAmount;
     private Double totalAmount;
     private boolean paymentStatus;
+    private String patientPhone;
 
     @ManyToOne
     @JoinColumn(name="doctor_id")
@@ -108,6 +109,14 @@ public class Billing {
 
     public void setPrescription(Prescription prescription) {
         this.prescription = prescription;
+    }
+
+    public String getPatientPhone() {
+        return patientPhone;
+    }
+
+    public void setPatientPhone(String patientPhone) {
+        this.patientPhone = patientPhone;
     }
 }
 

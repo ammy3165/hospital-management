@@ -15,5 +15,4 @@ public interface BillingRepository extends JpaRepository<Billing, Long> {
 
     @Query("select SUM(b.totalAmount) TotalAmountByPatientPhone from Billing b where b.patient.phone=patientPhone")
     Double TotalAmountByPatientPhone(@Param("patientPhone") String patientPhone);
-
 }

@@ -6,7 +6,7 @@ public class PatientRequest {
     private String gender;
     private String Email;
     private String password;
-    private Long phoneNumber;
+    private String phoneNumber;
     private int age;
     private String Address;
 
@@ -42,11 +42,11 @@ public class PatientRequest {
         this.password = password;
     }
 
-    public Long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

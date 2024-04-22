@@ -12,7 +12,7 @@ public class Receptionist {
     private String lastName;
     private String gender;
     private String password;
-    private Long phoneNumber;
+    private String phoneNumber;
 
     @Column(unique=true)
     private String email;
@@ -66,11 +66,11 @@ public class Receptionist {
         this.password = password;
     }
 
-    public Long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

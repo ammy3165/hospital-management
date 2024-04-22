@@ -41,6 +41,8 @@ public class ReceptionistService {
         else
             throw new EntityNotFoundException("Receptionist not registered.");
     }
+
+
     public Double getBillDetails(String patientPhone) {
 
        List<Billing> billingList = billingRepo.findByPatientPhone(patientPhone);
@@ -60,7 +62,7 @@ public class ReceptionistService {
         List<Billing> billing = billingRepo.findByPatientPhone(patientPhone);
         if (billing.isEmpty()) {
             throw new EntityNotFoundException("No such billing list.");
-        }
+        }else
         for (Billing bill : billing) {
             if (!bill.isPaymentStatus())
                 bill.isPaymentStatus();

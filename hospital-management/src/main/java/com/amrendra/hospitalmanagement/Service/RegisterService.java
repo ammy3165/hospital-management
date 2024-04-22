@@ -65,7 +65,7 @@ public class RegisterService {
             patient.setEmail(registerRequest.getEmail());
             patient.setAge(registerRequest.getAge());
             patient.setGender(registerRequest.getGender());
-            patient.setPatientPhone(registerRequest.getPhoneNumber());
+            patient.setPhone(registerRequest.getPhoneNumber());
             patient.setPassword(registerRequest.getPassword());
             patient.setAddress(registerRequest.getAddress());
             patientRepo.save(patient);
@@ -91,7 +91,7 @@ public class RegisterService {
         patient.setGender(patientRequest.getGender());
         patient.setAddress(patientRequest.getAddress());
         patient.setAge(patientRequest.getAge());
-        patient.setPatientPhone(patientRequest.getPhoneNumber());
+        patient.setPhone(patientRequest.getPhoneNumber());
         patient.setPassword(patientRequest.getPassword());
         patient.setEmail(patientRequest.getEmail());
         patientRepo.save(patient);

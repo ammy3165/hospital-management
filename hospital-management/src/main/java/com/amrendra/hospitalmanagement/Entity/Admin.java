@@ -16,7 +16,7 @@ public class Admin {
 
     @Column(unique = true)
     private  String email;
-    private Long phoneNumber;
+    private String phoneNumber;
 
     private String password;
 
@@ -53,11 +53,11 @@ public class Admin {
         this.email = email;
     }
 
-    public Long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

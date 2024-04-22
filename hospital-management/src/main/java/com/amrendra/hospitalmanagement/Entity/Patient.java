@@ -13,7 +13,7 @@ public class Patient {
     private String lastName;
     private String gender;
     private String password;
-    private Long phone;
+    private String phone;
     private int age;
     private String Address;
 
@@ -85,19 +85,11 @@ public class Patient {
         Address = address;
     }
 
-    public Long getPatientPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPatientPhone(Long patientPhone) {
-        this.phone = patientPhone;
-    }
-
-    public Long getPhone() {
-        return phone;
-    }
-
-    public void setPhone(Long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 }
