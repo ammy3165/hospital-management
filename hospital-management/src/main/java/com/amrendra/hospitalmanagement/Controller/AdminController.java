@@ -20,9 +20,8 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
     
-    @PostMapping(value="/login")
+    @PostMapping(value="/postAllData")
     public AdminResponse adminLogIn(@RequestBody AdminRequest adminRequest) throws ValidationException {
-
        return adminService.adminLogIn(adminRequest);
     }
 
