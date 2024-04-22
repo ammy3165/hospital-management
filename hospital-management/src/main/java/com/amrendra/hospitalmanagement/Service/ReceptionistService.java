@@ -55,7 +55,7 @@ public class ReceptionistService {
                 else return 0.00;
             }
         }
-        throw new EntityNotFoundException("No such bill exist");
+        throw new EntityNotFoundException("No such bill exist.");
     }
 
     public String clearDues(String patientPhone) {
