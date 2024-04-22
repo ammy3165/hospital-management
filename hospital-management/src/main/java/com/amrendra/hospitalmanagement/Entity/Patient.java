@@ -20,7 +20,6 @@ public class Patient {
     @Column(unique=true)
     private String email;
 
-
     public int getPatientId() {
         return patientId;
     }
